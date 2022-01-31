@@ -9,15 +9,14 @@ import os  # Para trabajar en un SO, creando archivos temporales
 os.sys.path
 print('done')
 
-
+# Umbralización
 img1 = cv2.imread('nieve1.PNG')
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-
 ret, thresh1 = cv2.threshold(gray1, 210, 255, cv2.THRESH_BINARY)
 cv2.imshow('1', thresh1)
 img2 = cv2.imread('nieve2.PNG')
 gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 ret, thresh2 = cv2.threshold(gray2, 210, 255, cv2.THRESH_BINARY)
 cv2.imshow('2', thresh2)
-print('done')
-cv2.waitKey(0)
+
+#
